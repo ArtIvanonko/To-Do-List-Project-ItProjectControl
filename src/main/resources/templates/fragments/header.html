@@ -2,7 +2,7 @@
      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
      sec:authorize="isAuthenticated()">
     <div>
-        <a th:href="@{/}">Home Page</a> |
+        <a th:href="@{/src/main/resources}">Home Page</a> |
         <a th:href="@{|/todos/all/users/${#authentication.details.id}|}">My To-Dos</a>
         <span sec:authorize="hasAuthority('ADMIN')">
            | <a th:href="@{/users/all}">List of Users</a>
